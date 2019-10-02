@@ -1,6 +1,6 @@
-import simpleio
-import pulseio
-import time
+import simpleio #pylint: disable-msg=import-error
+import pulseio #pylint: disable-msg=import-error
+import time #pylint: disable-msg=import-error
 
 class RGB:
     kind="colors"
