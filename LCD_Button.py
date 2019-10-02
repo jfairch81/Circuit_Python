@@ -1,17 +1,17 @@
 # Jude Fairchild
 # LCD Button Monitor
 # 8/30/19
-import board
+import board #pylint: disable-msg=import-error
 #import neopixel
-import math
-import time
-import digitalio
-import adafruit_bus_device
+import math #pylint: disable-msg=import-error
+import time #pylint: disable-msg=import-error
+import digitalio #pylint: disable-msg=import-error
+import adafruit_bus_device #pylint: disable-msg=import-error
 
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+from lcd.lcd import LCD #pylint: disable-msg=import-error
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface #pylint: disable-msg=import-error
 
-from lcd.lcd import CursorMode
+from lcd.lcd import CursorMode #pylint: disable-msg=import-error
 
 lcd = LCD(I2CPCF8574Interface(0x27), num_rows=2, num_cols=16)
 
