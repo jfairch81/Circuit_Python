@@ -2,13 +2,13 @@
 # Use a distance sensor to change colors of an RGB LED
 # 9/11/19
 
-import board
-import time
-import digitalio
-import adafruit_bus_device
-import adafruit_hcsr04
-import neopixel
-import simpleio
+import board #pylint: disable-msg=import-error
+import time #pylint: disable-msg=import-error
+import digitalio #pylint: disable-msg=import-error
+import adafruit_bus_device #pylint: disable-msg=import-error
+import adafruit_hcsr04 #pylint: disable-msg=import-error
+import neopixel #pylint: disable-msg=import-error
+import simpleio #pylint: disable-msg=import-error
 
 r = 0
 g = 0
