@@ -22,9 +22,10 @@ dot = neopixel.NeoPixel(board.NEOPIXEL, 1, brightness=.1)
 while True:
 
 
-    try:
-        print((sonar.distance,))
-        if sonar.distance <= 20:
+    try: #Essentially works as an if/else statement for Distance Sensor
+         # If it can read it then it will print the distance, otherwise it will print "Popeyes"
+        print((sonar.distance,)) #Prints the distance in the Serial Monitor
+        if sonar.distance <= 20: #I used 20 because the green both goes up and comes down from 35 to 20
 
             r = simpleio.map_range(sonar.distance, 0,20,255,0)
             b = simpleio.map_range(sonar.distance, 5,20,0,255)
@@ -32,10 +33,10 @@ while True:
 
         else:
             r = simpleio.map_range(sonar.distance, 0,20,255,0)
-            b = simpleio.map_range(sonar.distance, 35,20,0,255)
+            b = simpleio.map_range(sonar.distance, 35,20,0,255) #I mapped the Sonar Range and the RGB from 0 - 255
             g = simpleio.map_range(sonar.distance, 20,35,0,255)
 
-        dot.fill((int(r),int(g),int(b)))
+        dot.fill((int(r),int(g),int(b))) #Code for the LED colors on the Metro Express
     except RuntimeError:
         print("Popeyes")
 
