@@ -39,7 +39,7 @@ while True:
         dot.fill((int(r),int(g),int(b))) #Code for the LED colors on the Metro Express
         dot.fill((int(r),int(g),int(b))) #Fills the Red Green and Blue to the distance mapped
     except RuntimeError:
-        print("Popeyes")
+        print("Jude")
 
     time.sleep(0.1)
 
