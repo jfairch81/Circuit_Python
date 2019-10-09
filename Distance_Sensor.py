@@ -10,11 +10,11 @@ import adafruit_hcsr04 #pylint: disable-msg=import-error
 import neopixel #pylint: disable-msg=import-error
 import simpleio #pylint: disable-msg=import-error
 
-r = 0
+r = 0 #Red Green and Blue variables for the RGB LED on the board
 g = 0
 b = 0
 
-sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.D12, echo_pin = board.D11)
+sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.D12, echo_pin = board.D11) #This is how you get HC-SR04 on Adafruit
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1, brightness=.1)
 
 
@@ -27,7 +27,7 @@ while True:
         print((sonar.distance,)) #Prints the distance in the Serial Monitor
         if sonar.distance <= 20: #I used 20 because the green both goes up and comes down from 35 to 20
 
-            r = simpleio.map_range(sonar.distance, 0,20,255,0)
+            r = simpleio.map_range(sonar.distance, 0,20,255,0) # Mapping the LED for the distance and the RGB
             b = simpleio.map_range(sonar.distance, 5,20,0,255)
             g = simpleio.map_range(sonar.distance, 20,35,0,255)
 
@@ -37,6 +37,7 @@ while True:
             g = simpleio.map_range(sonar.distance, 20,35,0,255)
 
         dot.fill((int(r),int(g),int(b))) #Code for the LED colors on the Metro Express
+        dot.fill((int(r),int(g),int(b))) #Fills the Red Green and Blue to the distance mapped
     except RuntimeError:
         print("Popeyes")
 
