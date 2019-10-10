@@ -5,6 +5,9 @@
 Make a servo turn one way when one wire is touched and turn the other when another wire is touched
 #### What I Learned
 I didn't know what capacitive touch was so this helped me, also I learned how to code for a servo in CircuitPython
+
+<img src="Servo_bb.png" width="75">
+
 ### Hello CircuitPython
 #### Description
 Make an LED Fade in and out
