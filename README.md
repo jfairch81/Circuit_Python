@@ -6,7 +6,7 @@ Make a servo turn one way when one wire is touched and turn the other when anoth
 #### What I Learned
 I didn't know what capacitive touch was so this helped me, also I learned how to code for a servo in CircuitPython
 
-<img src="Circuit_Python/Media/Servo_bb.png" width="75">
+<img src="Media/Servo_bb.png" width="75">
 
 ### Hello CircuitPython
 #### Description
